@@ -1,16 +1,16 @@
-
 - - - - -
 Giải thích ý nghĩa từng dòng trong dockerfile
 - - - - -
 
-# Copy the app package and package-lock.json file
+## Copy the app package and package-lock.json file
 COPY package*.json ./
+### alo
 
-# Copy local directories to the current local directory of our docker image (/app)
+## Copy local directories to the current local directory of our docker image (/app)
 COPY ./src ./src
 COPY ./public ./public
 
-# Install node packages, install serve, build the app, and remove dependencies at the end
+## Install node packages, install serve, build the app, and remove dependencies at the end
 RUN npm install \
     && npm install -g serve \
     && npm run build \
@@ -18,6 +18,6 @@ RUN npm install \
 
 EXPOSE 3000
 
-# Start the app using serve command
+## Start the app using serve command
 CMD [ "serve", "-s", "build" ]
 
