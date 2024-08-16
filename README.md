@@ -28,7 +28,7 @@ RUN npm install \
 - Cài đặt những thư viện, packet gì vào trong docker image. "\" cái này là chạy trên nhiều dòng
 
 EXPOSE 3000
--Thường dùng Docker chạy các ứng dụng web. Nó sẽ mở 1 cái cổng ở trong docker container, kết nối cổng này với 1 cổng trên máy của chúng ta để khi nào lauch 1 cái web trong docker contaiter thì chúng ta có thể truy cập web đó trên máy của chúng ta 
+- Thường dùng Docker chạy các ứng dụng web. Nó sẽ mở 1 cái cổng ở trong docker container, kết nối cổng này với 1 cổng trên máy của chúng ta để khi nào lauch 1 cái web trong docker contaiter thì chúng ta có thể truy cập web đó trên máy của chúng ta 
 
 ## Start the app using serve command
 CMD [ "serve", "-s", "build" ]
